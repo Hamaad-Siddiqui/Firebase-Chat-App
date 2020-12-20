@@ -24,7 +24,7 @@ if (firebase.apps.length === 0) {
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-const analytics = firebase.analytics();
+// const analytics = firebase.analytics();
 
 function App() {
   const [user] = useAuthState(auth);
@@ -50,7 +50,7 @@ function SignIn() {
   return (
     <>
       <button className="sign-in" onClick={signInWithGoogle}>
-        <img className="logo" src={logo} />
+        <img className="logo" src={logo} alt="logo" />
         <span id="text">Sign in with Google</span>
       </button>
       <p>
@@ -131,6 +131,7 @@ function ChatMessage(props) {
           src={
             photoURL || "https://api.adorable.io/avatars/23/abott@adorable.png"
           }
+          alt=""
         />
         <p>{text}</p>
       </div>
